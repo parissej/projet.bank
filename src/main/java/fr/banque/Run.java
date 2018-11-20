@@ -15,8 +15,8 @@ public class Run {
 		client.afficher();
 		System.out.println();
 
-		client.ajouter(20, client.getCompte(1));
-		client.retirer(30.5, client.getCompte(0));
+		client.ajouter(20, client.getCompte(2401));
+		client.retirer(30.5, client.getCompte(5077));
 
 		client.afficher();
 		System.out.println();

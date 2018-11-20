@@ -1,10 +1,13 @@
 package fr.banque;
 
+import java.util.Hashtable;
+import java.util.Map;
+
 public class Client {
 
 	private String nom, prenom;
 	private int age, numeroClient;
-	private Compte[] comptes = new Compte[5];
+	private Map<Integer, Compte> listeCompte = new Hashtable<Integer, Compte>();
 
 	public Client() {
 		this(0, "TEST", "Test", 0);
@@ -50,15 +53,21 @@ public class Client {
 	}
 
 	public Compte[] getComptes() {
-		return this.comptes;
+		return this.listeCompte.values().toArray(new Compte[this.listeCompte.size()]);
 	}
 
 	public Compte getCompte(int unNumero) {
-		return this.getComptes()[unNumero];
+
+		for (Compte compte : this.getComptes()) {
+			if (compte.getNumero() == unNumero) {
+				return compte;
+			}
+		}
+		return null;
 	}
 
 	public void setCompte(int unNumero, Compte unCompte) {
-		this.getComptes()[unNumero] = unCompte;
+		this.listeCompte.put(unNumero, unCompte);
 	}
 
 	/**
@@ -68,19 +77,18 @@ public class Client {
 	 */
 	public boolean ajouterComptes(Compte unCompte) throws BanqueException {
 
-		for (int i = 0; i < this.getComptes().length; i++) {
-			if (this.getCompte(i) == null) {
-				this.setCompte(i, unCompte);
-				return true;
-			}
+		if (this.getComptes().length > 5) {
+			throw new BanqueException("Plus de place dans le tableau.");
 		}
-		throw new BanqueException("Plus de place dans le tableau.");
+
+		this.setCompte(unCompte.getNumero(), unCompte);
+		return true;
 	}
 
 	public String toStringComptes() {
 		String toString = "";
 
-		for (Compte compte : this.comptes) {
+		for (Compte compte : this.getComptes()) {
 			if (compte != null) {
 				toString += compte.toString() + "\n";
 			}
@@ -98,7 +106,7 @@ public class Client {
 
 	public void afficher() {
 		System.out.println(this.toString());
-		for (Compte compte : this.comptes) {
+		for (Compte compte : this.getComptes()) {
 			if (compte != null) {
 				compte.afficher();
 			}
