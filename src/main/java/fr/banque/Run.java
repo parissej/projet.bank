@@ -2,7 +2,7 @@ package fr.banque;
 
 public class Run {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws BanqueException {
 
 		Client client = new Client(240218, "PARISSEAUX", "Juliette", 20);
 
@@ -24,8 +24,12 @@ public class Run {
 		CompteRemunere c3 = new CompteRemunere(2513, 40, 0.7);
 		CompteASeuil c4 = new CompteASeuil(6842, 13.7, 10);
 
-		client.ajouterComptes(c3);
-		client.ajouterComptes(c4);
+		try {
+			client.ajouterComptes(c3);
+			client.ajouterComptes(c4);
+		} catch (BanqueException e) {
+			e.printStackTrace();
+		}
 
 		client.afficher();
 		System.out.println();

@@ -63,9 +63,10 @@ public class Client {
 
 	/**
 	 * @param unCompte à ajouter
-	 * @return true si le compte à été ajouté, false sinon
+	 * @return true si le compte à été ajouté
+	 * @throws BanqueException si il n'y a plus de place dans les comptes
 	 */
-	public boolean ajouterComptes(Compte unCompte) {
+	public boolean ajouterComptes(Compte unCompte) throws BanqueException {
 
 		for (int i = 0; i < this.getComptes().length; i++) {
 			if (this.getCompte(i) == null) {
@@ -73,7 +74,7 @@ public class Client {
 				return true;
 			}
 		}
-		return false;
+		throw new BanqueException("Plus de place dans le tableau.");
 	}
 
 	public String toStringComptes() {

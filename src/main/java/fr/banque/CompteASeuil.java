@@ -1,21 +1,19 @@
 package fr.banque;
 
-import java.security.InvalidParameterException;
-
 public class CompteASeuil extends Compte implements IComptASeuil {
 
 	private double seuil; // min du solde
 
-	public CompteASeuil(int unNumero, double unSoldeInitial, double pSeuil) throws InvalidParameterException {
+	public CompteASeuil(int unNumero, double unSoldeInitial, double pSeuil) throws BanqueException {
 		super(unNumero, unSoldeInitial);
 		this.setSeuil(pSeuil);
 		if (unSoldeInitial < pSeuil) {
-			throw new InvalidParameterException("Le solde initial doit être plus grand que le seuil !");
+			throw new BanqueException("Le solde initial doit être plus grand que le seuil !");
 		}
 
 	}
 
-	public CompteASeuil() throws InvalidParameterException {
+	public CompteASeuil() throws BanqueException {
 		this(0, 0, 0);
 	}
 
