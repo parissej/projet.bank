@@ -6,16 +6,7 @@
     <position height="-1" width="-1" x="134" y="75"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="2" language="java" name="fr.banque.Compte" project="projet.bank" 
-    file="/projet.bank/src/main/java/fr/banque/Compte.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="541" y="240"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="3" language="java" name="fr.banque.CompteRemunere" project="projet.bank" 
+  <class id="2" language="java" name="fr.banque.CompteRemunere" project="projet.bank" 
     file="/projet.bank/src/main/java/fr/banque/CompteRemunere.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="806" y="412"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -24,7 +15,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="fr.banque.Run" project="projet.bank" 
+  <class id="3" language="java" name="fr.banque.Run" project="projet.bank" 
     file="/projet.bank/src/main/java/fr/banque/Run.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="116" y="241"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -33,7 +24,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="fr.banque.Client" project="projet.bank" 
+  <class id="4" language="java" name="fr.banque.Client" project="projet.bank" 
     file="/projet.bank/src/main/java/fr/banque/Client.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="315" y="293"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -42,7 +33,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="fr.banque.CompteASeuil" project="projet.bank" 
+  <class id="5" language="java" name="fr.banque.CompteASeuil" project="projet.bank" 
     file="/projet.bank/src/main/java/fr/banque/CompteASeuil.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="798" y="146"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -51,7 +42,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="7" language="java" name="fr.banque.IComptASeuil" project="projet.bank" 
+  <interface id="6" language="java" name="fr.banque.IComptASeuil" project="projet.bank" 
     file="/projet.bank/src/main/java/fr/banque/IComptASeuil.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1069" y="106"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -60,7 +51,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="8" language="java" name="fr.banque.ICompteRemunere" project="projet.bank" 
+  <interface id="7" language="java" name="fr.banque.ICompteRemunere" project="projet.bank" 
     file="/projet.bank/src/main/java/fr/banque/ICompteRemunere.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1154" y="487"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -69,7 +60,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="9" language="java" name="fr.banque.CompteASeuilRemunere" project="projet.bank" 
+  <class id="8" language="java" name="fr.banque.CompteASeuilRemunere" project="projet.bank" 
     file="/projet.bank/src/main/java/fr/banque/CompteASeuilRemunere.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1162" y="290"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -78,7 +69,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="10" language="java" name="fr.banque.ICompte" project="projet.bank" 
+  <interface id="9" language="java" name="fr.banque.ICompte" project="projet.bank" 
     file="/projet.bank/src/main/java/fr/banque/ICompte.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1422" y="275"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -87,49 +78,58 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <realization id="11">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="8"/>  
-  </realization>  
+  <class id="10" language="java" name="fr.banque.Compte" project="projet.bank" 
+    file="/projet.bank/src/main/java/fr/banque/Compte.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="232" width="149" x="484" y="105"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="11">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
   <generalization id="12">    
-    <end type="SOURCE" refId="7"/>    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="10"/>  
   </generalization>  
-  <generalization id="13">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="14">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="15" name="comptes">        
-        <position height="0" width="0" x="-142" y="15"/>      
-      </attribute>      
-      <multiplicity id="16" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="-142" y="15"/>      
-      </multiplicity>    
+  <association id="13">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="14" name="listeCompte"/>      
+      <multiplicity id="15" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="17">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <realization id="18">    
-    <end type="SOURCE" refId="6"/>    
+  <realization id="16">    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="7"/>  
   </realization>  
-  <generalization id="19">    
+  <generalization id="17">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <generalization id="18">    
     <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <realization id="19">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <realization id="20">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <generalization id="21">    
+    <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="10"/>  
   </generalization>  
-  <generalization id="20">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <realization id="21">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="7"/>  
+  <realization id="22">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="6"/>  
   </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
